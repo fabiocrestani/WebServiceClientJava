@@ -20,6 +20,7 @@ import bolsaDeValores.exception.CannotConnectToServerException;
  * @author Fabio
  */
 public class WebServiceConsumer {
+	private final static int HTTP_OK = 200;
 	private final static int HTTP_CREATED = 201;
 	private static String SERVER_ADDRESS;
 	private static int SERVER_PORT;
@@ -60,7 +61,7 @@ public class WebServiceConsumer {
 			throw new CannotConnectToServerException("Servidor não responde.");
 		}
 
-		if (response.getStatus() != HTTP_CREATED) {
+		if (!((response.getStatus() == HTTP_CREATED) || (response.getStatus() == HTTP_OK))) {
 			throw new CannotConnectToServerException(
 					"Erro. não foi possível conectar ao servidor. Código do erro HTTP: " + response.getStatus());
 		}
