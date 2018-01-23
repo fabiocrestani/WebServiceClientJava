@@ -11,8 +11,8 @@ import bolsaDeValores.webServiceConsumer.WebServiceConsumer;
  */
 public class BolsaDeValoresClient {
 	private final static String SERVER_ADDRESS = "localhost";
-	private final static int SERVER_PORT = 58853;
-	private final static String SERVICE_NAME = "StockMarket";
+	private final static int SERVER_PORT = 2222;
+	private final static String SERVICE_NAME = "servidorBolsaDeValores";
 
 	/**
 	 * main. Inicia o serviço do cliente.
