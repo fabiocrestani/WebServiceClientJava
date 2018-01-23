@@ -137,7 +137,7 @@ public class Client {
 				throw new CannotPlaceOrder("Servidor recusou a ordem.");
 			}
 		} catch (CannotConnectToServerException e) {
-			throw new CannotPlaceOrder("Erro ao conectar ao servidor.");
+			throw new CannotPlaceOrder("Erro ao conectar ao servidor. Motivo: " + e.getMessage());
 		}
 	}
 
